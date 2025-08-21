@@ -45,7 +45,7 @@ function About() {
           transition={{ duration: 0.6, type: "spring", stiffness: 80 }} className='text-3xl mt-4 hidden lg:block text-cyan-400 font-semibold'>Mahad Khan</motion.h2>
       <motion.p  initial={{ opacity: 0, y: 80 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, ease: "easeOut" }} className='mt-3 text-[12px] lg:text-xl leading-relaxed'>
+    transition={{ duration: 1, ease: "easeOut" }} className='mt-3 text-[12px] m-auto lg:text-xl sm:w-2/3 lg:w-auto'>
         Hello! My name is <span className='text-cyan-400'>Mahad Khan</span>, and I am a passionate <span className='text-cyan-400'>Full Stack Developer</span> with experience in building dynamic and responsive web applications. I specialize in both <span className='text-cyan-400'>frontend and backend development</span>, creating seamless user experiences. I am proficient in technologies such as <span className='text-cyan-400'>React.js, Next.js, Tailwind CSS, and Sanity (Database)</span>. My goal is to craft modern web solutions that solve real-world problems. I enjoy learning new technologies, and constantly improving my skills.
       </motion.p>
     </div>
