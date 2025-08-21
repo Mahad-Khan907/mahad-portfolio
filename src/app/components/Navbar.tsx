@@ -34,7 +34,7 @@ function Navbar() {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="text-3xl font-bold cursor-pointer hover:text-cyan-300 [text-shadow:0_0_15px_rgba(34,211,238,0.5)] hover:[text-shadow:0_0_25px_rgba(34,211,238,1)]"
         >
-          <a href="#">
+          <a href="/#">
             Mahad<span className="text-blue-400">.</span>
           </a>
         </motion.div>
