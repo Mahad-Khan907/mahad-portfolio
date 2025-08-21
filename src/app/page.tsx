@@ -27,7 +27,7 @@ export default function Home() {
             <h2 className="lg:text-2xl text-xl font-semibold">
               And I'm a <span className="text-cyan-400 font-bold">Full Stack Developer</span>
             </h2>
-            <h3 className="lg:text-lg text-[12px]">
+            <h3 className="lg:text-lg sm:w-[450px] lg:w-auto text-[12px]">
               I’m a highly motivated Full Stack Developer who believes in continuous learning and innovation.
               I love creating powerful, end-to-end solutions that transform concepts into reality and push
               boundaries in the digital world.
