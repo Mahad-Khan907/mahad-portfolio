@@ -117,7 +117,7 @@ function Navbar() {
               <a href="https://www.facebook.com/share/16s3tVVwab/" target="_blank" rel="noopener noreferrer">
                 <motion.h1 variants={navItemVariant} whileHover={{ scale: 1.2 , color: "#3b5998"}}><FaFacebook /></motion.h1>
               </a>
-              <a href="https://www.aedin.com/in/khan-khan-5772a8347" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/khan-khan-5772a8347" target="_blank" rel="noopener noreferrer">
                 <motion.h2 variants={navItemVariant} whileHover={{ scale: 1.2 , color: "#0e76a8"}}><SiLinkedin /></motion.h2>
               </a>
               <a href="https://github.com/Mahad-Khan907/" target="_blank" rel="noopener noreferrer">
