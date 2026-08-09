@@ -127,7 +127,7 @@ function Skills() {
         </motion.div>
 
         <motion.div variants={logoItemVariant} className="flex flex-col bg-gray-900 p-5 rounded-2xl items-center hover:scale-110 transition-all duration-300">
-          <Image className='bg-white' src="/openclaw cli.png" alt="Openclaw CLI" width={80} height={80} />
+          <Image className='bg-white' src="/openclaw cli.png" alt="Openclaw CLI" width={60} height={60} />
           <p className="text-gray-300 mt-2 text-sm font-semibold">Openclaw CLI</p>
         </motion.div>
 
