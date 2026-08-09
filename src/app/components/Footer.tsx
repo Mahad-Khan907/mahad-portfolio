@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FaFacebook, FaGithub } from "react-icons/fa";
-import { SiLinkedin } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import Link from "next/link";
 
@@ -56,7 +56,7 @@ export default function Footer() {
             variants={navItemVariant}
             whileHover={{ scale: 1.2, color: "#0e76a8" }}
           >
-            <SiLinkedin />
+            <FaLinkedin />
           </motion.a>
 
           <motion.a

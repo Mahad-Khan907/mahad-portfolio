@@ -6,7 +6,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { SiLinkedin } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,11 +46,11 @@ function Navbar() {
           variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
           className="lg:flex hidden space-x-12 text-md font-semibold"
         >
-          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="#">Home</a></motion.li>
-          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="#about">About</a></motion.li>
-          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="#skills">Skills</a></motion.li>
-          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="#projects">Projects</a></motion.li>
-          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="#contact">Contact</a></motion.li>
+          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="/#">Home</a></motion.li>
+          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="/#about">About</a></motion.li>
+          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="/#skills">Skills</a></motion.li>
+          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="/#projects">Projects</a></motion.li>
+          <motion.li variants={navItemVariant} whileHover={{ scale: 1.2 }} className="hover:text-cyan-300 cursor-pointer"><a href="/#contact">Contact</a></motion.li>
         </motion.ul>
 
         {/* Desktop Socials */}
@@ -64,7 +64,7 @@ function Navbar() {
             <motion.h1 variants={navItemVariant} whileHover={{ scale: 1.2 , color: "#3b5998"}} ><FaFacebook /></motion.h1>
           </a>
           <a href="https://www.linkedin.com/in/khan-khan-5772a8347" target="_blank" rel="noopener noreferrer">
-            <motion.h2 variants={navItemVariant} whileHover={{ scale: 1.2, color: "#0e76a8" }}><SiLinkedin /></motion.h2>
+            <motion.h2 variants={navItemVariant} whileHover={{ scale: 1.2, color: "#0e76a8" }}><FaLinkedin /></motion.h2>
           </a>
           <a href="https://github.com/Mahad-Khan907/" target="_blank" rel="noopener noreferrer">
             <motion.h2 variants={navItemVariant} whileHover={{ scale: 1.2 , color: "#6e5494"}}><FaGithub /></motion.h2>
@@ -100,11 +100,11 @@ function Navbar() {
               variants={{ visible: { transition: { staggerChildren: 0.25 } } }}
               className="flex flex-col space-y-6 text-lg px-4 font-semibold bg-gray-900 p-4 rounded-lg shadow-lg"
             >
-              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="#">Home</a></motion.li>
-              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="#about">About</a></motion.li>
-              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="#skills">Skills</a></motion.li>
-              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="#projects">Projects</a></motion.li>
-              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="#contact">Contact</a></motion.li>
+              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="/#">Home</a></motion.li>
+              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="/#about">About</a></motion.li>
+              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="/#skills">Skills</a></motion.li>
+              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="/#projects">Projects</a></motion.li>
+              <motion.li variants={mobileItemVariant} whileHover={{ scale: 1.05 }} ><a onClick={()=>setIsOpen(false)} href="/#contact">Contact</a></motion.li>
             </motion.ul>
 
             {/* Mobile Socials */}
@@ -118,7 +118,7 @@ function Navbar() {
                 <motion.h1 variants={navItemVariant} whileHover={{ scale: 1.2 , color: "#3b5998"}}><FaFacebook /></motion.h1>
               </a>
               <a href="https://www.aedin.com/in/khan-khan-5772a8347" target="_blank" rel="noopener noreferrer">
-                <motion.h2 variants={navItemVariant} whileHover={{ scale: 1.2 , color: "#0e76a8"}}><SiLinkedin /></motion.h2>
+                <motion.h2 variants={navItemVariant} whileHover={{ scale: 1.2 , color: "#0e76a8"}}><FaLinkedin /></motion.h2>
               </a>
               <a href="https://github.com/Mahad-Khan907/" target="_blank" rel="noopener noreferrer">
                 <motion.h2 variants={navItemVariant} whileHover={{ scale: 1.2 , color: "#6e5494"}}><FaGithub /></motion.h2>

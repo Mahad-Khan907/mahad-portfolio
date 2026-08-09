@@ -125,7 +125,24 @@ function Skills() {
           <Image className='bg-white' src="/github.png" alt="Github" width={60} height={60} />
           <p className="text-gray-300 mt-2 text-sm font-semibold">Github</p>
         </motion.div>
+
+        <motion.div variants={logoItemVariant} className="flex flex-col bg-gray-900 p-5 rounded-2xl items-center hover:scale-110 transition-all duration-300">
+          <Image className='bg-white' src="/openclaw cli.jpg" alt="Openclaw CLI" width={80} height={80} />
+          <p className="text-gray-300 mt-2 text-sm font-semibold">Openclaw CLI</p>
+        </motion.div>
+
+        <motion.div variants={logoItemVariant} className="flex flex-col bg-gray-900 p-5 rounded-2xl items-center hover:scale-110 transition-all duration-300">
+          <Image className='bg-white' src="/claude cli.png" alt="Claude CLI" width={60} height={60} />
+          <p className="text-gray-300 mt-2 text-sm font-semibold">Claude CLI</p>
+        </motion.div>
+
+        <motion.div variants={logoItemVariant} className="flex flex-col bg-gray-900 p-5 rounded-2xl items-center hover:scale-110 transition-all duration-300">
+          <Image className='bg-white' src="/gemini cli.webp" alt="Gemini CLI" width={60} height={60} />
+          <p className="text-gray-300 mt-2 text-sm font-semibold">Gemini CLI</p>
+        </motion.div>
+
       </motion.div>
+      
 
     </div>
   )

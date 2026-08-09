@@ -1,39 +1,47 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 function ContactForm() {
-  const [state, handleSubmit] = useForm("xeozbbdj");
-  const [showForm, setShowForm] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    if (state.succeeded) {
-      setSuccess(true);
-      setShowForm(false);
-      const timer = setTimeout(() => {
-        setSuccess(false);
-        setShowForm(true);
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [state.succeeded]);
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
-  if (success) {
-    return (
-      <p className="text-center text-green-500 font-semibold">
-        ✅ Thanks for joining!
-      </p>
-    );
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setSubmitting(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        form.reset();
+        setSuccess(true);
+        timerRef.current = setTimeout(() => setSuccess(false), 3000);
+      } else {
+        setError("Could not send your message. Please try again.");
+      }
+    } catch {
+      setError("Could not send your message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
+
   return (
     <div id="contact" className="flex items-center justify-center px-6 py-16">
       <motion.form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSubmit(e);
-        }}
+        onSubmit={handleSubmit}
         className="w-full max-w-2xl space-y-6 text-white"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +81,6 @@ function ContactForm() {
               required
               className="w-full px-4 py-3 rounded-md border border-gray-300  focus:ring-2 focus:ring-blue-500 outline-none"
             />
-            <ValidationError prefix="Email" field="email" errors={state.errors} />
           </div>
         </motion.div>
         <motion.div
@@ -103,7 +110,6 @@ function ContactForm() {
             required
             className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none"
           />
-          <ValidationError prefix="Message" field="message" errors={state.errors} />
         </motion.div>
         <motion.div
           className="text-center"
@@ -113,14 +119,29 @@ function ContactForm() {
         >
           <motion.button
             type="submit"
-            disabled={state.submitting}
+            disabled={submitting}
             className="w-full md:w-auto px-8 py-3 bg-gray-900 hover:bg-gray-950 text-white font-medium rounded-md transition duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {state.submitting ? "Sending..." : "Send Message"}
+            {submitting ? "Sending..." : "Send Message"}
           </motion.button>
         </motion.div>
+        {success && (
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-center text-green-500 font-semibold"
+          >
+            ✅ Thanks for joining!
+          </motion.p>
+        )}
+        {error && (
+          <p className="text-center text-red-500 font-semibold">
+            {error}
+          </p>
+        )}
       </motion.form>
     </div>
   );

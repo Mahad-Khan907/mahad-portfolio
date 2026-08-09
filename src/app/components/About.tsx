@@ -21,7 +21,7 @@ function About() {
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{ duration: 1.2, type: "spring", stiffness: 100 }} className='lg:w-1/3 flex justify-center'>
+            transition={{ duration: 1.2, type: "spring", stiffness: 70 }} className='lg:w-1/3 flex justify-center'>
       <Image 
         className='myshadow lg:w-[300px] lg:h-[350px] w-[150px] h-auto overflow-hidden object-cover rounded-full lg:rounded-lg shadow-2xl border-4 border-cyan-400' 
         src="/mahad2.jpeg" 
@@ -45,8 +45,8 @@ function About() {
           transition={{ duration: 0.6, type: "spring", stiffness: 80 }} className='text-3xl mt-4 hidden lg:block text-cyan-400 font-semibold'>Mahad Khan</motion.h2>
       <motion.p  initial={{ opacity: 0, y: 80 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, ease: "easeOut" }} className='mt-3 text-[12px] lg:text-xl leading-relaxed'>
-        Hello! My name is <span className='text-cyan-400'>Mahad Khan</span>, and I am a passionate <span className='text-cyan-400'>Full Stack Developer</span> with experience in building dynamic and responsive web applications. I specialize in both <span className='text-cyan-400'>frontend and backend development</span>, creating seamless user experiences. I am proficient in technologies such as <span className='text-cyan-400'>React.js, Next.js, Tailwind CSS, and Sanity (Database)</span>. My goal is to craft modern web solutions that solve real-world problems. I enjoy learning new technologies, and constantly improving my skills.
+    transition={{ duration: 1, ease: "easeOut" }} className='mt-3 text-[12px] m-auto lg:text-xl sm:w-2/3 lg:w-auto '>
+       Hello! My name is <span className='text-cyan-400'>Mahad Khan</span>, and I am a passionate <span className='text-cyan-400'>Full Stack Developer</span> with experience in building dynamic and responsive web applications. I specialize in both <span className='text-cyan-400'>frontend and backend development</span>, creating seamless user experiences. I am proficient in technologies such as <span className='text-cyan-400'>React.js, Next.js, Tailwind CSS, and Sanity</span>. Additionally, I build <span className='text-cyan-400'>Agentic AI solutions and AI chatbots</span> using Python-based AI Agent SDKs, alongside working with CLIs like <span className='text-cyan-400'>Gemini, Claude, and OpenClaw</span>. My goal is to craft modern web solutions that solve real-world problems while constantly expanding my skill set.
       </motion.p>
     </div>
 
@@ -60,8 +60,8 @@ function About() {
     <div>
       <h3 className="text-xl font-semibold text-white">Education</h3>
       <p className="text-gray-400 text-sm mt-2">
-        I am currently in <span className="text-cyan-400 font-medium">2nd year Pre-Medical </span> 
-        and also learning <span className="text-cyan-400 font-medium">IT</span> at 
+        I have completed <span className="text-cyan-400 font-medium">my FSC from</span> <span className="text-cyan-400 font-medium">Adamjee Govt Science College Karachi  </span> 
+        and also learning advance technologies like <span className="text-cyan-400 font-medium">IT & Agentic AI</span> at 
         <span className="text-cyan-400 font-medium"> Governor House Karachi</span>.
       </p>
     </div>
@@ -73,8 +73,8 @@ function About() {
     <div>
       <h3 className="text-xl font-semibold text-white">Skills & Learning</h3>
       <p className="text-gray-400 text-sm mt-2">
-        Exploring <span className="text-cyan-400 font-medium">Web Development</span>, 
-        focusing on React.js, Next.js, Tailwind CSS, and modern tools to build real-world projects.
+        Exploring <span className="text-cyan-400 font-medium">Web Development & AI Agents</span>, 
+        focusing on React.js, Next.js, Tailwind CSS, Python , AI Agents SDK and modern tools to build real-world projects with AI Integrations.
       </p>
     </div>
   </div>
