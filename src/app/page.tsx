@@ -62,9 +62,7 @@ export default function Home() {
           transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
           className="text-white gap-4 lg:mt-6 mt-10 flex justify-center lg:justify-start"
         >
-          <a href="/chat"
-            target="_blank"
-            rel="noopener noreferrer">
+          <a href="mailto:khan03126569@gmail.com">
           <button className="bg-green-600 py-2 px-4 font-semibold rounded-md cursor-pointer">
             Let's Talk
           </button>
