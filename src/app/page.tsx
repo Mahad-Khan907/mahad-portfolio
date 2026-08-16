@@ -9,23 +9,6 @@ import Contact from "./components/Contact";
 
 
 export default function Home() {
-
-  const handleLetsTalk = () => {
-    const email = "khan03126569@gmail.com";
-
-    const isMobile =
-      /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      window.location.href = `mailto:${email}`;
-    } else {
-      window.open(
-        `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`,
-        "_blank"
-      );
-    }
-  };
-
   return (
     <div className="overflow-hidden">
     <div className="w-full h-auto lg:p-32 p-10">
@@ -79,13 +62,13 @@ export default function Home() {
           transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
           className="text-white gap-4 lg:mt-6 mt-10 flex justify-center lg:justify-start"
         >
-          <button
-            onClick={handleLetsTalk}
-            className="bg-green-600 py-2 px-4 font-semibold rounded-md cursor-pointer"
-          >
-            Let's Talk
+          <a href="/Mahad-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+          <button className="bg-green-600 py-2 px-4 font-semibold rounded-md cursor-pointer">
+            Download CV
           </button>
-
+          </a>
           <a href="#contact">
           <button className="bg-cyan-600 py-2 px-4 font-semibold rounded-md cursor-pointer">
             Contact Me
