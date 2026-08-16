@@ -14,8 +14,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/chat",
-        destination:
-          "https://mail.google.com/mail/?view=cm&fs=1&to=khan03126569@gmail.com",
+        destination: "mailto:khan03126569@gmail.com",
         permanent: false,
       },
     ];
