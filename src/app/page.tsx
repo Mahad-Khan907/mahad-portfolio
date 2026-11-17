@@ -1,93 +1,55 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
-import { div } from "framer-motion/client";
-import Image from "next/image";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 
+import React, { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Certifications from "@/components/Certifications";
+import Skills from "@/components/Skills";
+import Services from "@/components/Services";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
+  // Global cursor spotlight tracking across spotlight-card elements
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const cards = document.querySelectorAll(".spotlight-card");
+      cards.forEach((card) => {
+        const rect = (card as HTMLElement).getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        (card as HTMLElement).style.setProperty("--mouse-x", `${x}px`);
+        (card as HTMLElement).style.setProperty("--mouse-y", `${y}px`);
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <div className="overflow-hidden">
-    <div className="w-full h-auto lg:p-32 p-10">
-      <div className="flex flex-col-reverse lg:flex-row md:justify-between items-center lg:items-start text-white gap-8">
-        
-        {/* left side */}
-        <AnimatePresence>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="flex flex-col space-y-4 text-center lg:text-left"
-          >
-            <p className="lg:text-2xl text-xl font-semibold">Hello, It's Me🖐</p>
-            <h1 className="lg:text-5xl text-3xl font-bold">Mahad Khan</h1>
-            <h2 className="lg:text-2xl text-xl font-semibold">
-              And I'm a <span className="text-cyan-400 font-bold">Full Stack Developer</span>
-            </h2>
-            <h3 className="lg:text-lg sm:w-[450px] lg:w-auto text-[12px]">
-              I’m a highly motivated Full Stack Developer who believes in continuous learning and innovation.
-              I love creating powerful, end-to-end solutions that transform concepts into reality and push
-              boundaries in the digital world.
-            </h3>
-          </motion.div>
-        </AnimatePresence>
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Background Ambient Glows */}
+      <div className="fixed top-0 left-1/4 w-[550px] h-[550px] dark:bg-cyan-500/10 bg-blue-400/10 rounded-full blur-[140px] pointer-events-none -z-10 transition-colors duration-500"></div>
+      <div className="fixed bottom-1/3 right-10 w-[550px] h-[550px] dark:bg-blue-600/10 bg-indigo-300/10 rounded-full blur-[140px] pointer-events-none -z-10 transition-colors duration-500"></div>
 
-        {/* right side (profile picture) */}
-        <AnimatePresence>
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 1.2, type: "spring", stiffness: 70 }}
-            className="myshadow w-[150px] h-[150px] mt-[-30px] lg:w-[850px] lg:h-[350px] rounded-full overflow-hidden shadow-2xl border-4 border-cyan-400"
-          >
-            <Image
-              src="/mahad.jpeg"
-              alt="Mahad"
-              width={800}
-              height={800}
-              className="object-cover w-full h-full"
-            />
-          </motion.div>
-        </AnimatePresence>
-      </div>
+      {/* Grid Pattern */}
+      <div className="fixed inset-0 bg-theme-grid pointer-events-none -z-20 transition-all duration-300"></div>
 
-      {/* buttons */}
-      <AnimatePresence>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
-          className="text-white gap-4 lg:mt-6 mt-10 flex justify-center lg:justify-start"
-        >
-          <a href="/Mahad-CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer">
-          <button className="bg-green-600 py-2 px-4 font-semibold rounded-md cursor-pointer">
-            Download CV
-          </button>
-          </a>
-          <a href="#contact">
-          <button className="bg-cyan-600 py-2 px-4 font-semibold rounded-md cursor-pointer">
-            Contact Me
-          </button></a>
-        </motion.div>
-      </AnimatePresence>
-    </div>
-    <div className="mt-16">
-    <About/>
-     </div>
-     <div className="mt-16 lg:mt-40">
-    <Skills/>
-    </div>
-     <div className="mt-16 lg:mt-32">
-    <Projects/>
-    </div>
-    <div className="mt-16 lg:mt-12">
-    <Contact/>
-   </div>
+      {/* Main Page Layout */}
+      <Navbar />
+      <main className="pt-20">
+        <Hero />
+        <About />
+        <Certifications />
+        <Skills />
+        <Services />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
