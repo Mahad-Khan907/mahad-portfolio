@@ -47,7 +47,7 @@ export default function Footer() {
             <a href="https://github.com/Mahad-Khan907/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg dark:bg-slate-900 bg-slate-100 flex items-center justify-center dark:hover:text-white hover:text-slate-900 transition-colors" title="GitHub">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/khan-khan-5772a8347" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg dark:bg-slate-900 bg-slate-100 flex items-center justify-center hover:text-blue-500 transition-colors" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/mahad-khan-5772a8347?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg dark:bg-slate-900 bg-slate-100 flex items-center justify-center hover:text-blue-500 transition-colors" title="LinkedIn">
               <FaLinkedinIn />
             </a>
             <a href="https://www.facebook.com/share/16s3tVVwab/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg dark:bg-slate-900 bg-slate-100 flex items-center justify-center hover:text-blue-500 transition-colors" title="Facebook">

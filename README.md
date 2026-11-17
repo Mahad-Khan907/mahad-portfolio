@@ -4,6 +4,7 @@
 [![React](https://img.shields.io/badge/React-19.1.0-blue?style=flat&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mahad%20Khan-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/mahad-khan-5772a8347?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 A high-performance modern developer portfolio showcasing full-stack engineering, PCAOF-certified Agentic AI workflows, and production web applications.

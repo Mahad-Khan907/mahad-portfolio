@@ -161,7 +161,7 @@ export default function Contact() {
                   <FaGithub className="text-sm" /> GitHub
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/khan-khan-5772a8347"
+                  href="https://www.linkedin.com/in/mahad-khan-5772a8347?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-xl dark:bg-slate-900 bg-blue-50 border dark:border-[#1e263d] border-blue-200 dark:hover:border-blue-400 hover:border-blue-400 dark:text-slate-300 text-blue-700 dark:hover:text-cyan-400 hover:text-blue-600 text-xs font-bold flex items-center gap-2 transition-all shadow-xs"

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaArrowDown, FaPaperPlane, FaGithub, FaCheck, FaCopy, FaShieldAlt } from "react-icons/fa";
+import { FaArrowDown, FaPaperPlane, FaGithub, FaLinkedinIn, FaCheck, FaCopy, FaShieldAlt } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 
 export default function Hero() {
@@ -96,6 +96,16 @@ export default function Hero() {
                 title="GitHub Repository"
               >
                 <FaGithub className="text-base" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/mahad-khan-5772a8347?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl dark:bg-[#0f131f] bg-white border dark:border-[#1e263d] border-slate-300 dark:text-slate-300 text-slate-700 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transition-all shadow-xs"
+                title="LinkedIn Profile"
+              >
+                <FaLinkedinIn className="text-base" />
               </a>
             </div>
 

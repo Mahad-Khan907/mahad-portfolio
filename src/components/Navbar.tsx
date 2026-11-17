@@ -111,7 +111,7 @@ export default function Navbar() {
               <a href="https://github.com/Mahad-Khan907/" target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-lg dark:hover:text-white hover:text-slate-900 transition-colors" title="GitHub">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/khan-khan-5772a8347" target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-lg hover:text-blue-500 transition-colors" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/mahad-khan-5772a8347?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-lg hover:text-blue-500 transition-colors" title="LinkedIn">
                 <FaLinkedinIn />
               </a>
               <a href="https://www.facebook.com/share/16s3tVVwab/" target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-lg hover:text-blue-500 transition-colors" title="Facebook">
@@ -178,7 +178,7 @@ export default function Navbar() {
           <div className="pt-3 border-t dark:border-[#1e263d] border-slate-200 flex items-center justify-between">
             <div className="flex gap-4 dark:text-slate-400 text-slate-600 text-base">
               <a href="https://github.com/Mahad-Khan907/" target="_blank" rel="noopener noreferrer" className="dark:hover:text-white hover:text-slate-900 transition-colors"><FaGithub /></a>
-              <a href="https://www.linkedin.com/in/khan-khan-5772a8347" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"><FaLinkedinIn /></a>
+              <a href="https://www.linkedin.com/in/mahad-khan-5772a8347?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"><FaLinkedinIn /></a>
               <a href="https://www.facebook.com/share/16s3tVVwab/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"><FaFacebookF /></a>
             </div>
             <a
