@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLocationDot, FaCopy, FaCheck, FaPaperPlane, FaDownload } from "react-icons/fa6";
+import { FaEnvelope, FaLocationDot, FaCopy, FaCheck, FaPaperPlane, FaDownload, FaEye } from "react-icons/fa6";
 import { FaGithub, FaLinkedinIn, FaFacebookF, FaExclamationCircle } from "react-icons/fa";
 
 export default function Contact() {
@@ -122,12 +122,13 @@ export default function Contact() {
                   <span className="text-[11px] text-slate-500 font-mono truncate block">Full Stack & AI Architect</span>
                 </div>
                 <a
-                  href="/resume.pdf"
-                  download="Mahad_Khan_Resume.pdf"
-                  className="text-xs dark:bg-cyan-500 dark:text-black bg-blue-600 text-white font-mono px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 shadow-xs hover:opacity-90 flex-shrink-0"
+                  href="/resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs dark:bg-cyan-500 dark:text-black bg-blue-600 text-white font-mono px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 shadow-xs hover:opacity-90 flex-shrink-0 cursor-pointer"
                 >
-                  <FaDownload className="text-[10px]" />
-                  <span>Download</span>
+                  <FaEye className="text-[11px]" />
+                  <span>View CV</span>
                 </a>
               </div>
             </div>

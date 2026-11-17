@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "@/context/ThemeContext";
 import { FaGithub, FaLinkedinIn, FaFacebookF, FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
-import { FaDownload } from "react-icons/fa6";
+import { FaDownload, FaEye } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -119,14 +119,15 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* Download Resume Button */}
+            {/* View Resume Button (Opens Viewer with Download Option) */}
             <a
-              href="/resume.pdf"
-              download="Mahad_Khan_Resume.pdf"
-              title="Download Resume"
+              href="/resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="View Resume"
               className="hidden sm:inline-flex px-3.5 py-2 rounded-xl dark:bg-gradient-to-r dark:from-cyan-500 dark:to-blue-600 dark:text-black bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider transition-all dark:shadow-cyan-glow shadow-sm hover:opacity-95 items-center gap-1.5 cursor-pointer"
             >
-              <FaDownload className="text-xs" />
+              <FaEye className="text-xs" />
               <span>Resume</span>
             </a>
 
@@ -182,11 +183,12 @@ export default function Navbar() {
               <a href="https://www.facebook.com/share/16s3tVVwab/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"><FaFacebookF /></a>
             </div>
             <a
-              href="/resume.pdf"
-              download="Mahad_Khan_Resume.pdf"
-              className="px-3.5 py-1.5 rounded-lg dark:bg-cyan-500 dark:text-black bg-blue-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-xs"
+              href="/resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded-lg dark:bg-cyan-500 dark:text-black bg-blue-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-xs cursor-pointer"
             >
-              <FaDownload className="text-xs" />
+              <FaEye className="text-xs" />
               <span>Resume</span>
             </a>
           </div>
