@@ -156,23 +156,23 @@ export default function Navbar() {
             Overview
           </a>
           <a onClick={(e) => scrollToSection(e, "about")} href="#about" className="block hover:text-blue-500 py-1 transition-colors cursor-pointer">
-            About & Education
+            About
           </a>
           <a onClick={(e) => scrollToSection(e, "certifications")} href="#certifications" className="block hover:text-blue-500 py-1 flex items-center justify-between transition-colors cursor-pointer">
-            <span>PCAOF Certification</span>
-            <span className="px-2 py-0.5 rounded text-[10px] bg-cyan-500/20 text-cyan-400 font-mono">Panaversity</span>
+            <span>PCAOF Cert</span>
+            <span className="px-2 py-0.5 rounded text-[10px] bg-cyan-500/20 text-cyan-400 font-mono">AI</span>
           </a>
           <a onClick={(e) => scrollToSection(e, "skills")} href="#skills" className="block hover:text-blue-500 py-1 transition-colors cursor-pointer">
-            Tech Stack
+            Skills
           </a>
           <a onClick={(e) => scrollToSection(e, "services")} href="#services" className="block hover:text-blue-500 py-1 transition-colors cursor-pointer">
             Services
           </a>
           <a onClick={(e) => scrollToSection(e, "projects")} href="#projects" className="block hover:text-blue-500 py-1 transition-colors cursor-pointer">
-            Case Studies
+            Projects
           </a>
           <a onClick={(e) => scrollToSection(e, "contact")} href="#contact" className="block hover:text-blue-500 py-1 transition-colors cursor-pointer">
-            Contact Me
+            Contact
           </a>
 
           <div className="pt-3 border-t dark:border-[#1e263d] border-slate-200 flex items-center justify-between">
